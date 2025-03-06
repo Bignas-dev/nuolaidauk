@@ -196,7 +196,6 @@ class BarcodeScreen(Screen):
         self.top_bar.add_widget(self.title_label)
 
         # No fullscreen button needed since Android auto-fullscreens
-
         self.layout.add_widget(self.top_bar)
 
         # Barcode image display
