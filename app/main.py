@@ -1,3 +1,14 @@
+# Disable GStreamer to avoid compilation issues
+import os
+os.environ['KIVY_AUDIO'] = 'sdl2'
+os.environ['KIVY_VIDEO'] = 'null'
+os.environ['KIVY_MEDIA'] = 'sdl2'
+os.environ['KIVY_IMAGE'] = 'pil,sdl2'
+os.environ['KIVY_CAMERA'] = 'opencv'
+os.environ['KIVY_CLIPBOARD'] = 'sdl2'
+os.environ['KIVY_GL_BACKEND'] = 'sdl2'
+os.environ['KIVY_WINDOW'] = 'sdl2'
+
 from kivymd.app import MDApp
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.core.window import Window

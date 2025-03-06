@@ -5,6 +5,13 @@ import sys
 from kivy.resources import resource_add_path
 from kivy.config import Config
 from kivy.utils import platform
+
+# Fix import issue by adding parent directory to sys.path
+app_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(app_dir)
+if parent_dir not in sys.path:
+    sys.path.insert(0, parent_dir)
+
 from app.main import BarcodeApp
 
 def main():

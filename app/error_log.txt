@@ -1,1 +1,0 @@
-Error: MDLabel.text accept only str
